@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script type="text/babel">
+        // // APP Component
+        //     class App extends React.Component {
+        //         render() {
+        //             return(
+        //                 <div>
+        //                       Hello React Js From Parent Component
+        //                       <Child name ="test child"/>
+        //                 </div>
+        //             )
+        //         }
+        //     }
+        // //Child Component
+        //     class Child extends React.Component{
+        //         render(){
+        //             return(
+        //                 <p>Childe Component and props is :{this.props.name}</p>
+        //             )
+        //         }
+        //     }
+        //     ReactDOM.render(<App/>,document.getElementById('app'))
+
+
+        // APP Component
+
+
+
+        
+
+
+
+
+
+
+//طريقة أخرى 
+        // class App extends React.Component {
+        //     render() {
+        //         return (
+        //             <div>
+        //                 Hello React Js From Parent Component
+        //                 <Child name="test child" />
+        //             </div>
+        //         )
+        //     }
+        // }
+        // //Child Component
+        // function Child(props) {
+        //     return (
+        //         // <p>Child Component and Props Is: {console.log(props)} </p>
+        //         <p>Child Component and Props Is: {props.name} </p>
+
+        //         )
+        // }
+        // ReactDOM.render(<App />, document.getElementById('app'))
+
+
+
+
+
+        //  state تمرير 
+                // class App extends React.Component {
+
+                //     state = {
+                //         parent:'App Component Is Parent Component'
+                //     }
+
+                //     render() {
+                //         return (
+                //             <div>
+                //                 Hello React Js From Parent Component
+                //                 <Child name="test child" />
+                //                 State Of This Component Is {this.state.parent}
+                //             </div>
+                //         )
+                //     }
+                // }
+                // //Child Component
+                // function Child(props) {
+                //     return (
+                //         // <p>Child Component and Props Is: {console.log(props)} </p>
+                //         <p>Child Component and Props Is: {props.name} </p>
+
+                //         )
+                // }
+                // ReactDOM.render(<App />, document.getElementById('app'))
+
+
+
+
+//props لل value ك state  قمت بتمرير ال 
+//state عبارة عن ال prope قيمة ال 
+        class App extends React.Component {
+
+        state = {
+            parent:'App Component '
+        }
+
+        render() {
+            return (
+                <div>
+                    Hello React Js From Parent Component
+                    <Child name={this.state.parent} />
+                    State Of This Component Is {this.state.parent}
+                </div>
+            )
+        }
+        }
+        //Child Component
+        function Child(props) {
+        return (
+            // <p>Child Component and Props Is: {console.log(props)} </p>
+            <p>Child Component and Props Is: {props.name} </p>
+
+            )
+        }
+        ReactDOM.render(<App />, document.getElementById('app'))
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
